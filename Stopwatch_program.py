@@ -49,7 +49,6 @@ class StopWatch(QWidget):
                 background-color: #d97ea2;
                 color: white;
                 border-radius: 20px;
-                
             }
             QPushButton#Start{
                 background-color: #d97ea2; 
@@ -90,7 +89,7 @@ class StopWatch(QWidget):
         return f"{hours:02}:{minutes:02}:{seconds:02}{milliseconds:01}"
 
     def update_display(self):
-        self.time = self.time.addMSecs(10) # updates thhe time every 10 milliseconds
+        self.time = self.time.addMSecs(10)
         self.time_label.setText(self.format_time(self.time))
 
 if __name__=="__main__":
